@@ -1,0 +1,338 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Josselin Calderón | Ingeniera de Sistemas">
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Hola, soy <span>Josselin Calderón</span></h1>
+    <p class="role">Ingeniera de Sistemas · Desarrolladora Full Stack</p>
+    <p class="description">
+      Me especializo en frontend, creando interfaces claras, modernas y
+      orientadas a la experiencia del usuario. Trabajo con Angular, .NET y SQL
+      Server en proyectos empresariales.
+    </p>
+    <div class="actions">
+      <a href="/CV_JosselinCalderon.pdf" class="btn-primary" download>
+        Descargar CV (PDF)
+      </a>
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section class="about">
+    <h2 class="section-title">Sobre mí</h2>
+    <p>
+      Soy ingeniera de sistemas y desarrolladora Full Stack, con especial
+      interés en el desarrollo frontend y la creación de interfaces claras,
+      funcionales y orientadas a la experiencia del usuario.
+    </p>
+
+    <p>
+      Tengo experiencia trabajando con Angular, .NET C# y SQL Server en entornos
+      empresariales, participando en el desarrollo y mantenimiento de módulos
+      web, mejora de procesos y optimización de sistemas internos.
+    </p>
+
+    <p>
+      Me caracterizo por ser organizada, analítica y enfocada en entregar
+      soluciones prácticas, cuidando tanto la lógica del sistema como el diseño
+      y la usabilidad del producto final.
+    </p>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="skills">
+    <h2 class="section-title">Habilidades técnicas</h2>
+
+    <div class="skills-group">
+      <h3>Frontend</h3>
+      <ul>
+        <li>Angular</li>
+        <li>TypeScript</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Angular Material</li>
+        <li>Bootstrap</li>
+      </ul>
+    </div>
+
+    <div class="skills-group">
+      <h3>Backend</h3>
+      <ul>
+        <li>.NET C#</li>
+        <li>APIs REST</li>
+      </ul>
+    </div>
+
+    <div class="skills-group">
+      <h3>Base de datos</h3>
+      <ul>
+        <li>SQL Server</li>
+        <li>Procedimientos almacenados</li>
+      </ul>
+    </div>
+
+    <div class="skills-group">
+      <h3>Herramientas</h3>
+      <ul>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>Visual Studio</li>
+        <li>VS Code</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="experience">
+    <h2 class="section-title">Experiencia profesional</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <h3>Desarrolladora Full Stack</h3>
+        <span>Grupo Tawa · ROMBI</span>
+      </div>
+
+      <p class="job-description">
+        Participé en el desarrollo y mantenimiento de aplicaciones web
+        empresariales, enfocándome principalmente en el frontend con Angular y
+        en la integración con servicios backend en .NET.
+      </p>
+
+      <ul class="job-tasks">
+        <li>
+          Desarrollo de módulos web con Angular, utilizando Angular Material y
+          Bootstrap para interfaces claras y funcionales.
+        </li>
+        <li>Implementación y consumo de APIs REST en .NET C#.</li>
+        <li>
+          Creación y optimización de procedimientos almacenados en SQL Server.
+        </li>
+        <li>
+          Mantenimiento, corrección de errores y mejora continua de sistemas
+          internos.
+        </li>
+      </ul>
+
+      <div class="job-tech">
+        <span>Angular</span>
+        <span>.NET C#</span>
+        <span>SQL Server</span>
+        <span>Angular Material</span>
+        <span>Bootstrap</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTA -->
+  <section class="note">
+    <p><strong>Próximos pasos</strong></p>
+    <ul>
+      <li>Publicar proyectos destacados.</li>
+      <li>Incluir logros medibles.</li>
+      <li>Agregar más experiencia profesional.</li>
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  /* HERO */
+  .hero {
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h1 span {
+    color: var(--accent);
+  }
+
+  .role {
+    color: var(--text-muted);
+  }
+
+  .description {
+    font-size: 1.02rem;
+    max-width: 680px;
+    color: var(--text-main);
+  }
+
+  /* BOTON DESCARGAR PDF */
+  .actions {
+    margin-top: 2rem;
+  }
+
+  .btn-primary {
+    color: var(--accent);
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .btn-primary:hover {
+    text-decoration: underline;
+  }
+
+  /* TITULO SECCIONES */
+
+  .section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+  /* ABOUT */
+  .about {
+    max-width: 750px;
+  }
+
+  .hero p,
+  .about p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: var(--text-main);
+  }
+
+  /* SKILLS */
+  .skills {
+    margin-top: 5rem;
+  }
+
+  .skills-group {
+    margin-bottom: 2.5rem;
+  }
+
+  .skills-group h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+  }
+
+  .skills-group ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .skills-group li {
+    background: var(--chip-bg);
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    border: 1px solid var(--chip-border);
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  /* EXPERIENCE */
+  .experience {
+    margin-top: 5rem;
+    max-width: 800px;
+  }
+
+  .job {
+    background: transparent;
+    border-left: 2px solid var(--accent);
+    padding-left: 1.5rem;
+  }
+
+  .job-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .job-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .job-header span {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .job-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+  }
+
+  .job-tasks {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .job-tasks li {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+    color: var(--text-main);
+  }
+
+  .job-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .job-tech span {
+    background: var(--chip-bg);
+    border: 1px solid var(--border-soft);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+  }
+
+  /* SECCIONES */
+  section {
+    margin-bottom: 5.5rem;
+  }
+
+  section + section {
+    margin-top: 6rem;
+  }
+
+  /* TITULOS */
+  h2 {
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  /* NOTA */
+
+  .note {
+    margin-top: 4rem;
+    max-width: 650px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  .note strong {
+    color: var(--text-main);
+  }
+
+  .note ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .note li {
+    margin-bottom: 0.4rem;
+  }
+</style>

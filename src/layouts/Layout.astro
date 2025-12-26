@@ -1,0 +1,104 @@
+---
+const { title = "Josselin Calderón | CV" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <button id="theme-toggle" aria-label="Cambiar tema"> 🌙 </button>
+    <main class="container">
+      <slot />
+    </main>
+
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+
+      if (toggle) {
+        const savedTheme = localStorage.getItem("theme") || "dark";
+
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        toggle.textContent = savedTheme === "light" ? "🌞" : "🌙";
+
+        toggle.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme");
+          const next = current === "light" ? "dark" : "light";
+
+          document.documentElement.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+          toggle.textContent = next === "light" ? "🌞" : "🌙";
+        });
+      }
+    </script>
+  </body>
+</html>
+
+<style>
+  :root {
+    --bg-main: #020617;
+    --bg-accent: #0f172a;
+    --text-main: #e5e7eb;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --border-soft: rgba(255, 255, 255, 0.12);
+  /* para chips */
+  --chip-bg: rgba(255, 255, 255, 0.06);
+  --chip-border: rgba(255, 255, 255, 0.12);
+  }
+
+  [data-theme="light"] {
+    --bg-main: #f8fafc;
+    --bg-accent: #e2e8f0;
+    --text-main: #020617;
+    --text-muted: #475569;
+    --accent: #0284c7;
+
+    /* NUEVO */
+  --border-soft: rgba(2, 6, 23, 0.12);
+  --chip-bg: rgba(2, 6, 23, 0.06);
+  --chip-border: rgba(2, 6, 23, 0.15);
+  }
+
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, sans-serif;
+    background: radial-gradient(
+      ellipse at top left,
+      var(--bg-accent),
+      var(--bg-main) 70%
+    );
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 3rem 1.5rem;
+  }
+
+  #theme-toggle {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-main);
+    border-radius: 999px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+</style>
