@@ -7,7 +7,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://joscdev.github.io',
+  site: 'https://josscdev.github.io',
   base: '/resume/',
 });
 
